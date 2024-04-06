@@ -12,8 +12,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -al
-      - run: ls -al ${{ github.workspace }}
+      - uses: actions/checkout@v4
       - run: go run ${{ github.workspace }}
       - run: |
           git config user.name github-actions
